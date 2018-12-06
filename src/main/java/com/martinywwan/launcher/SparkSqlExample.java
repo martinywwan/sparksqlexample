@@ -97,7 +97,7 @@ public class SparkSqlExample {
         Schema schema = parser.parse(ClassLoader.getSystemResourceAsStream("martin.avsc")); //This works
         System.out.println(schema.toString()); //This works
 //        sqlds.write().option("forceSchema",schema.toString()).parquet("hdfs://localhost:9000/user/hive/warehouse/martin.db/martin_test/");
-        StreamingQuery streamingQuery = sqlds.writeStream().option("forceSchema",schema.toString()).option("checkpointLocation","/home/martinywwan/").start("hdfs://localhost:9000/user/hive/warehouse/martin.db/martin_test/");
+        StreamingQuery streamingQuery = sqlds.writeStream().option("forceSchema",schema.toString()).option("checkpointLocation","/home/martinywwan/").format("com.databricks.spark.avro").start("hdfs://localhost:9000/user/hive/warehouse/martin.db/martin_test/");
         streamingQuery.processAllAvailable();
         // in parquet format
 
