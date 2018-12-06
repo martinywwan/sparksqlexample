@@ -1,0 +1,26 @@
+{"namespace": "testing.hive.avro.serde",
+  "name": "martin",
+  "type": "record",
+  "fields": [
+    {
+      "name":"value",
+      "type":"string",
+      "doc":"Order of playing the role"
+    },
+    {
+      "name":"age",
+      "type":"int",
+      "doc":"Order of playing the role"
+    },
+    {
+      "name":"name",
+      "type":"string",
+      "doc":"first name of actor playing role"
+    },
+    {
+      "name":"version",
+      "type":"int",
+      "doc":"first name of actor playing role"
+    }
+  ]
+}
