@@ -4,18 +4,20 @@ import java.io.Serializable;
 
 public class Person implements Serializable {
 
-    private String name;
+    private String id;
+
+    private String namePerson;
 
     private Integer age;
 
-    private int version;
+    private int versionNumber;
 
-    public String getName() {
-        return name;
+    public String getNamePerson() {
+        return namePerson;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNamePerson(String namePerson) {
+        this.namePerson = namePerson;
     }
 
     public Integer getAge() {
@@ -28,15 +30,23 @@ public class Person implements Serializable {
 
     @Override
     public String toString(){
-//            System.out.println("HELLO : " + name);
-        return "HELLO : " + name;
+//            System.out.println("HELLO : " + namePerson);
+        return "HELLO : " + namePerson;
     }
 
-    public void setVersion(int version) {
-        this.version = version;
+    public void setVersionNumber(int versionNumber) {
+        this.versionNumber = versionNumber;
     }
 
-    public int getVersion() {
-        return version;
+    public int getVersionNumber() {
+        return versionNumber;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
